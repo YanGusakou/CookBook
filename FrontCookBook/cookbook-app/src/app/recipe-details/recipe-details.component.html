@@ -1,0 +1,433 @@
+
+
+<!-- <div class="recipe-details-container">
+  <div *ngIf="recipe">
+    <div class="recipe-title">
+      <h2>{{ recipe.title }}</h2>
+    </div>
+
+    <div class="content-container">
+      <div class="ratings-and-favorite-section">
+        <div class="ratings-section">
+          <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+          <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка: {{ averageRating }}</p>
+
+          <ng-container *ngIf="userRating === null">
+            <p>Оцените рецепт:</p>
+            <div>
+              <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+              <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+              <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+              <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+              <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="userRating !== null">
+            <p>Ваша оценка: {{ userRating }}</p>
+            <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+          </ng-container>
+        </div>
+
+        <div class="favorite-section">
+          <button class="btn-favorite" (click)="toggleFavorite()">
+            {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+          </button>
+
+          <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+        </div>
+      </div>
+
+      <div class="recipe-content">
+        <div class="ingredients-section">
+          <h4>Ингредиенты</h4>
+          <p>{{ recipe.ingredients }}</p>
+        </div>
+
+        <div class="instructions-section">
+          <h4>Инструкция по приготовлению</h4>
+          <p>{{ recipe.instructions }}</p>
+        </div>
+      </div>
+
+      <div class="comments-section">
+        <h4>Комментарии ({{ comments.length }})</h4>
+        <ul *ngIf="comments.length > 0">
+          <li *ngFor="let comment of comments">
+            <div class="comment-details">
+              <p>{{ comment.content }}</p>
+              <p class="user-name">Автор: {{ comment.userName }}</p>
+              <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">
+                Удалить
+              </button>
+            </div>
+          </li>
+        </ul>
+        <p *ngIf="comments.length === 0">Нет комментариев.</p>
+      </div>
+
+      <div class="add-comment-section">
+        <h4>Добавьте комментарий</h4>
+        <textarea [(ngModel)]="commentContent" placeholder="Введите комментарий"></textarea>
+        <button class="btn-add-comment" (click)="addComment()">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- С блоками -->
+<!-- <div class="recipe-details-container">
+
+  <div *ngIf="recipe">
+    <div class="recipe-title">
+      <h3>{{ recipe.title }}</h3>
+    </div>
+
+    <div class="content-container">
+      <div class="ratings-and-favorite-section">
+        <div class="ratings-section">
+          <h4>Оценка рецепта</h4>
+          <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+          <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка рецепта: {{ averageRating }}</p>
+
+          <ng-container *ngIf="userRating === null">
+            <p>Оцените рецепт:</p>
+            <div class="rating-buttons">
+              <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+              <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+              <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+              <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+              <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="userRating !== null">
+            <p>Ваша оценка: {{ userRating }}</p>
+            <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+          </ng-container>
+        </div>
+
+        <div class="favorite-section">
+          <button class="btn-favorite" (click)="toggleFavorite()">
+            {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+          </button>
+
+          <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+        </div>
+      </div>
+
+      <div class="recipe-content">
+        <div class="ingredients-section">
+          <h4>Ингредиенты</h4>
+          <p>{{ recipe.ingredients }}</p>
+        </div>
+
+        <div class="instructions-section">
+          <h4>Инструкция по приготовлению</h4>
+          <p>{{ recipe.instructions }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="comments-section">
+      <h4>Комментарии ({{ comments.length }})</h4>
+      <ul *ngIf="comments.length > 0">
+        <li *ngFor="let comment of comments">
+          <div class="comment-details">
+            <p>{{ comment.content }}</p>
+            <p class="user-name">Автор: {{ comment.userName }}</p>
+            <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">
+              Удалить
+            </button>
+          </div>
+        </li>
+      </ul>
+      <p *ngIf="comments.length === 0">Нет комментариев.</p>
+    </div>
+
+    <div class="add-comment-section">
+      <h4>Добавьте комментарий</h4>
+      <textarea [(ngModel)]="comments" placeholder="Введите комментарий"></textarea>
+      <button class="btn-add-comment" (click)="addComment()">Добавить комментарий</button>
+    </div>
+  </div>
+</div> -->
+  
+
+
+  <!-- Нормально 1 -->
+<div class="recipe-details-container">
+  <div *ngIf="recipe">
+    <div class="recipe-title">
+      <h2>{{ recipe.title }}</h2>
+    </div>
+
+    <div class="ratings-and-favorite-section">
+      <div class="ratings-section">
+        <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+        <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка: {{ averageRating.toFixed(1) }}</p>
+
+        <ng-container *ngIf="userRating === null">
+          <p>Оцените рецепт:</p>
+          <div>
+            <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+            <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+            <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+            <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+            <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="userRating !== null">
+          <p>Ваша оценка: {{ userRating }}</p>
+          <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+        </ng-container>
+      </div>
+
+      <div class="favorite-section">
+        <button class="btn-favorite" (click)="toggleFavorite()">
+          {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+        </button>
+
+        <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+      </div>
+    </div>
+
+    <div class="ingredients-section">
+      <h3>Ингредиенты</h3>
+      <p>{{ recipe.ingredients }}</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Инструкция по приготовлению</h3>
+      <p>{{ recipe.instructions }}</p>
+    </div>
+
+    <div class="comments-section">
+      <h3>Комментарии ({{ comments.length }})</h3>
+      <ul *ngIf="comments.length > 0">
+        <li *ngFor="let comment of comments">
+          <div class="comment-details">
+            <p>{{ comment.content }}</p>
+            <p class="user-name">Автор: {{ comment.userName }}</p>
+            <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">
+              Удалить
+            </button>
+          </div>
+        </li>
+      </ul>
+      <p *ngIf="comments.length === 0">Нет комментариев.</p>
+    </div>
+
+    <div class="add-comment-section">
+      <h3>Добавьте комментарий</h3>
+      <textarea [(ngModel)]="commentContent" placeholder="Введите комментарий"></textarea>
+      <button class="btn-add-comment" (click)="addComment()">Добавить</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Все поцентру 
+  <div class="recipe-details-container">
+  <div *ngIf="recipe">
+    <div class="recipe-title">
+      <h2>{{ recipe.title }}</h2>
+    </div>
+
+    <div class="ratings-and-favorite-section">
+      <div class="ratings-section">
+        <h3>Оценка рецепта</h3>
+        <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+        <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка рецепта: {{ averageRating }}</p>
+
+        <ng-container *ngIf="userRating === null">
+          <p>Оцените рецепт:</p>
+          <div>
+            <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+            <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+            <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+            <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+            <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="userRating !== null">
+          <p>Ваша оценка: {{ userRating }}</p>
+          <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+        </ng-container>
+      </div>
+
+      <div class="favorite-section">
+        <button class="btn-favorite" (click)="toggleFavorite()">
+          {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+        </button>
+
+        <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+      </div>
+    </div>
+
+    <div class="ingredients-section">
+      <h3>Ингредиенты</h3>
+      <p>{{ recipe.ingredients }}</p>
+    </div>
+
+    <div class="instructions-section">
+      <h3>Инструкция по приготовлению</h3>
+      <p>{{ recipe.instructions }}</p>
+    </div>
+
+    <div class="comments-section">
+      <h3>Комментарии ({{ comments.length }})</h3>
+      <ul *ngIf="comments.length > 0">
+        <li *ngFor="let comment of comments">
+          <div class="comment-details">
+            <p>{{ comment.content }}</p>
+            <p class="user-name">Автор: {{ comment.userName }}</p>
+            <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">
+              Удалить
+            </button>
+          </div>
+        </li>
+      </ul>
+      <p *ngIf="comments.length === 0">Нет комментариев.</p>
+    </div>
+
+    <div class="add-comment-section">
+      <h3>Добавьте комментарий</h3>
+      <textarea [(ngModel)]="commentContent" placeholder="Введите комментарий"></textarea>
+      <button class="btn-add-comment" (click)="addComment()">Добавить</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- Рабочее  -->
+<!-- <div class="recipe-details-container">
+
+  <div *ngIf="recipe">
+    <div class="recipe-title">
+      <h3>{{ recipe.title }}</h3>
+    </div>
+
+    <div class="ratings-and-favorite-section">
+      <div class="ratings-section">
+        <h4>Оценка рецепта</h4>
+        <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+        <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка рецепта: {{ averageRating }}</p>
+
+        <ng-container *ngIf="userRating === null">
+          <p>Оцените рецепт:</p>
+          <div>
+            <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+            <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+            <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+            <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+            <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="userRating !== null">
+          <p>Ваша оценка: {{ userRating }}</p>
+          <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+        </ng-container>
+      </div>
+
+      <div class="favorite-section">
+        <button class="btn-favorite" (click)="toggleFavorite()">
+          {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+        </button>
+
+        <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+      </div>
+    </div>
+
+    <div class="ingredients-section">
+      <h4>Ингредиенты</h4>
+      <p>{{ recipe.ingredients }}</p>
+    </div>
+
+    <div class="instructions-section">
+      <h4>Инструкция по приготовлению</h4>
+      <p>{{ recipe.instructions }}</p>
+    </div>
+
+    <div class="comments-section">
+      <h4>Комментарии ({{ comments.length }})</h4>
+      <ul *ngIf="comments.length > 0">
+        <li *ngFor="let comment of comments">
+          <div class="comment-details">
+            <p>{{ comment.content }}</p>
+            <p class="user-name">Автор: {{ comment.userName }}</p>
+            <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">
+              Удалить
+            </button>
+          </div>
+        </li>
+      </ul>
+      <p *ngIf="comments.length === 0">Нет комментариев.</p>
+    </div>
+
+    <div class="add-comment-section">
+      <h4>Добавьте комментарий</h4>
+      <textarea [(ngModel)]="commentContent" placeholder="Введите комментарий"></textarea>
+      <button class="btn-add-comment" (click)="addComment()">Добавить</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- <h2>Рецепт в деталях</h2>
+<div *ngIf="recipe">
+  <h3>{{ recipe.title }}</h3>
+  <p>{{ recipe.ingredients }}</p>
+  <p>{{ recipe.instructions }}</p>
+
+  <p class="average-rating">Средняя оценка: {{ averageRating }}</p>
+
+  <button *ngIf="isOwner()" class="btn-delete" (click)="deleteRecipe()">Удалить рецепт</button>
+
+  <button class="btn-favorite" (click)="toggleFavorite()">
+    {{ isFavorite ? 'Удалить из избранного' : 'Добавить в избранное' }}
+  </button>
+
+  <div class="ratings-section">
+    <h4>Оценка рецепта</h4>
+    <p class="average-rating" *ngIf="averageRating === 0">У этого рецепта пока нет оценок</p>
+    <p class="average-rating" *ngIf="averageRating !== 0">Средняя оценка: {{ averageRating }}</p>
+  
+    <ng-container *ngIf="userRating === null">
+      <p>Оцените рецепт:</p>
+      <div>
+        <button class="btn-rating" (click)="rateRecipe(1)">1</button>
+        <button class="btn-rating" (click)="rateRecipe(2)">2</button>
+        <button class="btn-rating" (click)="rateRecipe(3)">3</button>
+        <button class="btn-rating" (click)="rateRecipe(4)">4</button>
+        <button class="btn-rating" (click)="rateRecipe(5)">5</button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="userRating !== null">
+      <p>Ваша оценка: {{ userRating }}</p>
+      <button class="btn-delete-rating" (click)="deleteRating()">Удалить оценку</button>
+    </ng-container>
+  </div>
+
+  <div class="comments-section">
+    <h4>Комментарии ({{ comments.length }})</h4>
+    <ul *ngIf="comments.length > 0">
+      <li *ngFor="let comment of comments">
+        <div class="comment-details">
+          <p>{{ comment.content }}</p>
+          <p class="user-name">Автор: {{ comment.userName }}</p>
+          <button *ngIf="isCommentOwner(comment)" class="btn-delete-comment" (click)="deleteComment(comment.id)">Удалить</button>
+        </div>
+      </li>
+    </ul>
+    <p *ngIf="comments.length === 0">Нет комментариев.</p>
+  </div>
+
+  <div class="add-comment-section">
+    <h4>Добавить комментарий</h4>
+    <textarea [(ngModel)]="commentContent" placeholder="Введите комментарий"></textarea>
+    <button class="btn-add-comment" (click)="addComment()">Добавить</button>
+  </div>
+</div> -->

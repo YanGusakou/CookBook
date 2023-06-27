@@ -1,0 +1,17 @@
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Repository.deps.json
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Repository.dll
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Repository.pdb
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Contracts.dll
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Entities.dll
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Contracts.pdb
+F:\CookBook\CookBook\Repository\bin\Debug\net6.0\Entities.pdb
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.csproj.CopyComplete
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.dll
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\refint\Repository.dll
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\Repository.pdb
+F:\CookBook\CookBook\Repository\obj\Debug\net6.0\ref\Repository.dll

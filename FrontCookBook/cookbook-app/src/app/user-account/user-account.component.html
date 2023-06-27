@@ -1,0 +1,211 @@
+<div class="account-container">
+  <h2>Ваш аккаунт</h2>
+
+  <div class="user-info" *ngIf="user">
+    <p>Имя пользователя: {{ user.name }}</p>
+    <p>Электронная почта: {{ user.email }}</p>
+    <p>Дата рождения: {{ user.dateOfBirth | date }}</p>
+  </div>
+
+  <button class="btn btn-danger" (click)="deletingAccount = true">Удалить аккаунт</button>
+  <button class="btn btn-primary logout-button" (click)="logout()">Выйти из аккаунта</button>
+
+  <div class="modal" *ngIf="deletingAccount">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<h5 class="modal-title">Удаление аккаунта</h5>
+          <button type="button" class="close" (click)="deletingAccount = false">
+            <span aria-hidden="true">&times;</span>
+          </button>-->
+        </div>
+        <div class="modal-body">
+          <p>Вы уверены, что хотите удалить аккаунт?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="deletingAccount = false">Отмена</button>
+          <button type="button" class="btn btn-danger" (click)="confirmDeleteAccount()">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Избранные рецепты</h3>
+  <div *ngIf="favoriteRecipes && favoriteRecipes.length > 0">
+    <div class="favorite-recipe-card" *ngFor="let recipe of favoriteRecipes">
+      <a [routerLink]="['../../recipes', recipe.id]">{{ recipe.title }}</a>
+    </div>
+  </div>
+
+  <div *ngIf="favoriteRecipes && favoriteRecipes.length === 0">
+    <p>У вас нет избранных рецептов.</p>
+  </div>
+
+  
+</div>
+
+
+
+
+<!-- Прекрасно -->
+<!-- <div class="account-container">
+  <h2>Ваш аккаунт</h2>
+
+  <div class="user-info" *ngIf="user">
+    <p>Имя пользователя: {{ user.name }}</p>
+    <p>Электронная почта: {{ user.email }}</p>
+    <p>Дата рождения: {{ user.dateOfBirth | date }}</p>
+  </div>
+
+  <button class="btn btn-danger" (click)="deletingAccount = true">Удалить аккаунт</button>
+
+  <h3>Избранные рецепты</h3>
+  <div *ngIf="favoriteRecipes && favoriteRecipes.length > 0">
+    <div class="favorite-recipe-card" *ngFor="let recipe of favoriteRecipes">
+      <a [routerLink]="['../../recipes', recipe.id]">{{ recipe.title }}</a>
+    </div>
+  </div>
+
+  <div *ngIf="favoriteRecipes && favoriteRecipes.length === 0">
+    <p>У вас нет избранных рецептов.</p>
+  </div>
+
+  <div class="modal" *ngIf="deletingAccount">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Удаление аккаунта</h5>
+          <button type="button" class="close" (click)="deletingAccount = false">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Вы уверены, что хотите удалить аккаунт?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="deletingAccount = false">Отмена</button>
+          <button type="button" class="btn btn-danger" (click)="confirmDeleteAccount()">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- Первое -->
+<!-- <h2>Ваш аккаунт</h2>
+<div class="user-info" *ngIf="user">
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Date of Birth: {{ user.dateOfBirth | date }}</p>
+</div>
+
+<button class="btn btn-danger" (click)="deletingAccount = true">Удалить аккаунт</button>
+
+<h3>Избранные рецепты</h3>
+<div *ngIf="favoriteRecipes && favoriteRecipes.length > 0">
+  <ul>
+    <li *ngFor="let recipe of favoriteRecipes">
+      <a [routerLink]="['../../recipes', recipe.id]">{{ recipe.title }}</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="favoriteRecipes && favoriteRecipes.length === 0">
+  <p>У вас нет избранных рецептов.</p>
+</div>
+
+<div class="modal" *ngIf="deletingAccount">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Удаление аккаунта</h5>
+        <button type="button" class="close" (click)="deletingAccount = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Вы уверены, что хотите удалить аккаунт?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="deletingAccount = false">Отмена</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDeleteAccount()">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+<!-- <h2>Ваш аккаунт</h2>
+<div class="user-info" *ngIf="user">
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Date of Birth: {{ user.dateOfBirth | date }}</p>
+</div>
+
+<h3>Избранные рецепты</h3>
+<div *ngIf="favoriteRecipes && favoriteRecipes.length > 0">
+  <ul>
+    <li *ngFor="let recipe of favoriteRecipes">
+      <a [routerLink]="['../../recipes', recipe.id]">{{ recipe.title }}</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="favoriteRecipes && favoriteRecipes.length === 0">
+  <p>У вас нет избранных рецептов.</p>
+</div> -->
+
+<!-- Модальное окно подтверждения удаления аккаунта -->
+<!-- <div class="modal" *ngIf="deletingAccount">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Удаление аккаунта</h5>
+        <button type="button" class="close" (click)="deletingAccount = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Вы уверены, что хотите удалить аккаунт?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="deletingAccount = false">Отмена</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDeleteAccount()">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <h2>Ваш аккаунт</h2>
+<div class="user-info" *ngIf="user">
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Date of Birth: {{ user.dateOfBirth | date }}</p>
+  <button class="btn btn-danger" (click)="deleteAccount()">Удалить аккаунт</button>
+</div>
+
+<div class="modal" *ngIf="deletingAccount">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Удаление аккаунта</h5>
+        <button type="button" class="close" (click)="deletingAccount = false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Вы уверены, что хотите удалить аккаунт?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="deletingAccount = false">Отмена</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDeleteAccount()">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+

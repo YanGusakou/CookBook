@@ -1,0 +1,17 @@
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.csproj.AssemblyReference.cache
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfoInputs.cache
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfo.cs
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.csproj.CoreCompileInputs.cache
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\LoggerService.deps.json
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\LoggerService.dll
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\LoggerService.pdb
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\Contracts.dll
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\Entities.dll
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\Contracts.pdb
+F:\CookBook\CookBook\LoggerService\bin\Debug\net6.0\Entities.pdb
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.csproj.CopyComplete
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.dll
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\refint\LoggerService.dll
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\LoggerService.pdb
+F:\CookBook\CookBook\LoggerService\obj\Debug\net6.0\ref\LoggerService.dll

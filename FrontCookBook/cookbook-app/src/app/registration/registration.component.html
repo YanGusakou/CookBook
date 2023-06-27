@@ -1,0 +1,77 @@
+<div class="registration-container">
+  <h2 class="registration-heading">Регистрация</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="name">Имя пользователя</label>
+      <input type="text" class="form-control" id="name" formControlName="name" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input type="password" class="form-control" id="password" formControlName="password" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="dateOfBirth">Дата рождения</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" [required]="true">
+    </div>
+    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+  </form>
+</div>
+
+
+
+
+<!-- <div class="registration-container">
+  <h2>Регистрация</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="name">Имя пользователя</label>
+      <input type="text" class="form-control" id="name" formControlName="name" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input type="password" class="form-control" id="password" formControlName="password" [required]="true">
+    </div>
+    <div class="form-group">
+      <label for="dateOfBirth">Дата рождения</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" [required]="true">
+    </div>
+    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+  </form>
+</div> -->
+
+
+
+
+
+
+<!-- <div class="registration-container">
+    <h2>Регистрация</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="name">Имя пользователя</label>
+        <input type="text" class="form-control" id="name" formControlName="name" [required]="true">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" [required]="true">
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" class="form-control" id="password" formControlName="password" [required]="true">
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth">Дата рождения</label>
+        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" [required]="true">
+      </div>
+      <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+    </form>
+  </div> -->
+  

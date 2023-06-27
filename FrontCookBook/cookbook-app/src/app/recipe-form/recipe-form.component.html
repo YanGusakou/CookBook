@@ -1,0 +1,134 @@
+
+<div class="add-recipe-container">
+  <h2>Добавление рецепта</h2>
+
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Название</label>
+      <input type="text" id="title" formControlName="title" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ingredients">Ингредиенты</label>
+      <textarea id="ingredients" formControlName="ingredients" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="instructions">Инструкции</label>
+      <textarea id="instructions" formControlName="instructions" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Категория</label>
+      <select id="category" formControlName="category" class="form-control" required>
+        <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]="recipeForm.invalid">Добавить рецепт</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- Первое -->
+<!-- <h2>Добавление рецепта</h2>
+
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Название</label>
+    <input type="text" id="title" formControlName="title" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="ingredients">Ингредиенты</label>
+    <textarea id="ingredients" formControlName="ingredients" class="form-control" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="instructions">Инструкции</label>
+    <textarea id="instructions" formControlName="instructions" class="form-control" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Категория</label>
+    <select id="category" formControlName="category" class="form-control" required>
+      <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" [disabled]="recipeForm.invalid">Добавить рецепт</button>
+  </div>
+</form> -->
+
+<!-- <h2>Add Recipe</h2>
+
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title">
+    <div *ngIf="recipeForm.get('title').invalid && recipeForm.get('title').touched">
+      Title is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ingredients">Ingredients</label>
+    <textarea id="ingredients" formControlName="ingredients"></textarea>
+    <div *ngIf="recipeForm.get('ingredients').invalid && recipeForm.get('ingredients').touched">
+      Ingredients is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="instructions">Instructions</label>
+    <textarea id="instructions" formControlName="instructions"></textarea>
+    <div *ngIf="recipeForm.get('instructions').invalid && recipeForm.get('instructions').touched">
+      Instructions is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="categoryId">Category</label>
+    <select id="categoryId" formControlName="categoryId">
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+    <div *ngIf="recipeForm.get('categoryId').invalid && recipeForm.get('categoryId').touched">
+      Category is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="recipeForm.invalid">Add Recipe</button>
+</form> -->
+
+<!-- <h2>Добавление рецепта</h2>
+
+<form [formGroup]="recipeForm" (ngSubmit)="addRecipe()">
+  <div class="form-group">
+    <label for="title">Название:</label>
+    <input type="text" id="title" formControlName="title" class="form-control" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="ingredients">Ингредиенты:</label>
+    <textarea id="ingredients" formControlName="ingredients" class="form-control" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="instructions">Инструкции:</label>
+    <textarea id="instructions" formControlName="instructions" class="form-control" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Категория:</label>
+    <select id="category" formControlName="categoryId" class="form-control" required>
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Добавить рецепт</button>
+</form>
+
+ -->

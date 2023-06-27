@@ -1,0 +1,39 @@
+
+
+<div class="navbar" *ngIf="!isLoginPage() && !isRegistrationPage()">
+  <a class="navbar-link" routerLink="recipes">Рецепты</a>
+  <div class="navbar-center">
+    <button class="add-recipe-button" (click)="goToAddRecipe()">Добавить рецепт</button>
+  </div>
+  <a class="navbar-link" routerLink="accounts/${id}">Аккаунт</a>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<!-- <div class="navbar" *ngIf="!isLoginPage() && !isRegistrationPage()">
+  <a class="navbar-link" routerLink="recipes">Recipes</a>
+  <button class="add-recipe-button" (click)="goToAddRecipe()">Add Recipe</button>
+  <a class="navbar-link" routerLink="accounts/${id}">User Account</a>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div> -->
+
+
+
+<!-- <div class="navbar" *ngIf="!isLoginPage() && !isRegistrationPage()">
+  <a routerLink="recipes">Recipes</a>
+  <button class="add-recipe-button" (click)="goToAddRecipe()">Add Recipe</button>
+  <a routerLink="accounts/${id}">User Account</a>
+  
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div> -->
+

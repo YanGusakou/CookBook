@@ -1,0 +1,635 @@
+
+
+
+
+
+
+
+
+/* С блоками */
+/* .recipe-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recipe-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ratings-and-favorite-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ratings-section {
+  flex: 1;
+}
+
+.average-rating {
+  margin-bottom: 10px;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.btn-rating {
+  margin-right: 5px;
+}
+
+.btn-delete-rating {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.favorite-section {
+  flex: 1;
+  text-align: right;
+}
+
+.btn-favorite {
+  background-color: #f5c518;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.recipe-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredients-section,
+.instructions-section {
+  flex: 1;
+}
+
+.ingredients-section h4,
+.instructions-section h4 {
+  margin-bottom: 10px;
+}
+
+.comments-section {
+  margin-bottom: 20px;
+}
+
+.comments-section h4 {
+  margin-bottom: 10px;
+}
+
+.comment-details {
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-delete-comment {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.add-comment-section {
+  margin-top: 20px;
+}
+
+.add-comment-section h4 {
+  margin-bottom: 10px;
+}
+
+.add-comment-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-add-comment {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+
+/* Нормально 1  */
+.recipe-details-container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.recipe-details-container h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ratings-and-favorite-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ratings-section,
+.favorite-section {
+  flex-grow: 1;
+}
+
+.ratings-section p {
+  font-size: 14px;
+  color: #333;
+  height: 30px;
+}
+
+.favorite-section button {
+  font-size: 14px;
+  color: #ffffff;
+  height: 30px;
+}
+
+.average-rating {
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-rating,
+.btn-delete-rating,
+.btn-favorite,
+.btn-delete {
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  height: 30px;
+}
+
+.btn-delete-rating,
+.btn-delete {
+  background-color: #ff4081;
+}
+
+.ingredients-section,
+.instructions-section,
+.comments-section,
+.add-comment-section {
+  margin-bottom: 20px;
+}
+
+.ingredients-section h3,
+.instructions-section h3,
+.comments-section h3,
+.add-comment-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ingredients-section p,
+.instructions-section p,
+.comment-details p,
+.comment-details .user-name,
+.add-comment-section textarea {
+  font-size: 14px;
+  color: #333;
+}
+
+.ingredients-section,
+.instructions-section {
+  text-align: left;
+}
+
+.comments-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment-details {
+  margin-bottom: 10px;
+}
+
+.comment-details .user-name {
+  font-style: italic;
+  margin-top: 5px;
+  color: #777;
+}
+
+.btn-delete-comment {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-comment-section textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.btn-add-comment {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 30px;
+}
+
+
+/*Все поцентру
+ .recipe-details-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.recipe-details-container h2,
+.recipe-details-container h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ratings-and-favorite-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ratings-section,
+.favorite-section {
+  flex-grow: 1;
+}
+
+.ratings-section h3 {
+  margin-bottom: 10px;
+}
+
+.average-rating {
+  font-size: 14px;
+  color: #777;
+}
+
+.btn-rating,
+.btn-delete-rating,
+.btn-favorite,
+.btn-delete {
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-delete-rating,
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.ingredients-section,
+.instructions-section,
+.comments-section,
+.add-comment-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ingredients-section h3,
+.instructions-section h3,
+.comments-section h3,
+.add-comment-section h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ingredients-section p,
+.instructions-section p,
+.comment-details p,
+.comment-details .user-name,
+.add-comment-section textarea {
+  font-size: 14px;
+  color: #333;
+}
+
+.comments-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment-details {
+  margin-bottom: 10px;
+}
+
+.comment-details .user-name {
+  font-style: italic;
+  margin-top: 5px;
+  color: #777;
+}
+
+.btn-delete-comment {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-comment-section textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.btn-add-comment {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+
+/* Рабочее  */
+/* .recipe-details-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.recipe-details-container h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.recipe-title {
+  margin-bottom: 20px;
+}
+
+.recipe-title h3 {
+  font-size: 30px;
+  color: #333;
+}
+
+.ratings-and-favorite-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ratings-section {
+  text-align: left;
+}
+
+.ratings-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.average-rating {
+  font-size: 14px;
+  color: #777;
+}
+
+.btn-rating {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-delete-rating {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.favorite-section {
+  text-align: right;
+}
+
+.btn-favorite {
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ingredients-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.ingredients-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructions-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.instructions-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comments-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.comments-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comments-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment-details {
+  margin-bottom: 10px;
+}
+
+.comment-details p {
+  margin: 0;
+}
+
+.comment-details .user-name {
+  font-style: italic;
+  margin-top: 5px;
+  color: #777;
+}
+
+.btn-delete-comment {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-comment-section {
+  text-align: left;
+}
+
+.add-comment-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-comment-section textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.btn-add-comment {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+
+/*.comments-section {
+    margin-top: 20px;
+  }
+  
+  .comments-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .comments-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .comment-details {
+    margin-bottom: 10px;
+  }
+  
+  .comment-details .user-name {
+    font-style: italic;
+    margin-top: 5px;
+  }
+  
+  .btn-delete-comment {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-comment-section {
+    margin-top: 20px;
+  }
+  
+  .add-comment-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .add-comment-section textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .btn-add-comment {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  } */
+  

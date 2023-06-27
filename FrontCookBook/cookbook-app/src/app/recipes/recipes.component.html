@@ -1,0 +1,88 @@
+<div class="filter-search-container">
+  <div class="search-container">
+    <label for="search-input"></label>
+    <input type="text" id="search-input" [(ngModel)]="searchQuery" placeholder="Поиск">
+  </div>
+
+  <div class="filter-container">
+    <label for="category-select"></label>
+    <select id="category-select" [(ngModel)]="selectedCategoryId" (ngModelChange)="onCategoryChange($event)">
+      <option [value]="0">Все категории</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="recipe-card-container">
+  <div class="row" *ngFor="let recipe of filteredRecipes; let i = index">
+    <div class="recipe-card">
+      <div class="recipe-title">
+        <a [routerLink]="['/recipes', recipe.id]">{{ recipe.title }}</a>
+      </div>
+      <div class="recipe-rating" *ngIf="averageRatings.has(recipe.id)">
+        Средняя оценка: {{ averageRatings.get(recipe.id)?.toFixed(1) }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Префинал -->
+<!-- <div class="filter-search-container">
+  <div class="search-container">
+    <label for="search-input">Поиск по названию:</label>
+    <input type="text" id="search-input" [(ngModel)]="searchQuery" placeholder="Поиск">
+  </div>
+
+  <div class="filter-container">
+    <label for="category-select">Фильтр по категории:</label>
+    <select id="category-select" [(ngModel)]="selectedCategoryId" (ngModelChange)="onCategoryChange($event)">
+      <option [value]="0">Все категории</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="recipe-card-container">
+  <div class="row" *ngFor="let recipe of filteredRecipes; let i = index">
+    <div class="recipe-card">
+      <div class="recipe-title">
+        <a [routerLink]="['/recipes', recipe.id]">{{ recipe.title }}</a>
+      </div>
+      <div class="recipe-rating" *ngIf="averageRatings.has(recipe.id)">
+        Средняя оценка: {{ averageRatings.get(recipe.id) }}
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="filter-search-container">
+  <div class="search-container">
+    <label for="search-input">Поиск по названию:</label>
+    <input type="text" id="search-input" [(ngModel)]="searchQuery" placeholder="Поиск">
+  </div>
+
+  <div class="filter-container">
+    <label for="category-select">Фильтр по категории:</label>
+    <select id="category-select" [(ngModel)]="selectedCategoryId" (ngModelChange)="onCategoryChange($event)">
+      <option [value]="0">Все категории</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="recipe-card-container">
+  <div class="column">
+    <div class="recipe-card" *ngFor="let recipe of filteredRecipes; let i = index" [ngClass]="{'right-column': i % 2 === 1}">
+      <div class="recipe-title">
+        <a [routerLink]="['/recipes', recipe.id]">{{ recipe.title }}</a>
+      </div>
+      <div class="recipe-rating" *ngIf="averageRatings.has(recipe.id)">
+        Средняя оценка: {{ averageRatings.get(recipe.id) }}
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,149 @@
+
+.filter-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  margin-left: 10px;
+  /* margin: 0 0px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+#category-select {
+  width: 200px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container {
+  margin-right: 10px;
+  /* margin: 0 20px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+#search-input {
+  width: 182px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.recipe-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-basis: 50%;
+  max-width: 20%;
+  gap: 20px;
+}
+
+.recipe-card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.recipe-title a {
+  text-decoration: none;
+  color: #ffa500;
+}
+
+.recipe-title a:hover {
+  color: #ff4081;
+}
+
+.recipe-rating {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Префинал */
+/* .filter-search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  333333
+
+  ffa500
+  
+  .filter-container {
+    margin-left: 20px;
+  }
+  
+  #category-select {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container {
+    margin-right: 20px;
+  }
+  
+  #search-input {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .recipe-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-basis: 50%;
+    max-width: 35%;
+    gap: 20px;
+  }
+  
+  .recipe-card {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .recipe-rating {
+    margin-top: 10px;
+    font-size: 16px;
+  } */
+    
